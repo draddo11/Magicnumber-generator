@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <title>Magic Number</title>
+</head>
+<body>
+    <div id="app"><v-app>
+            <v-toolbar >
+                    <v-toolbar-side-icon></v-toolbar-side-icon>
+                    <v-toolbar-title>Home</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-toolbar-items class="hidden-sm-and-down">
+                       <v-btn flat>About Us </v-btn>
+                      <v-btn flat>Places</v-btn>
+                      <v-btn flat>More</v-btn> 
+                    </v-toolbar-items>
+                  </v-toolbar> 
+        <v-content>
+          <v-container> </v-container>
+          <v-btn align-center justify-center color="info"@click='magic' >Click to Generate a random number </v-btn>
+        </v-content>
+        <template>
+                <v-footer
+                  dark
+                  height="auto"
+                >
+                  <v-card
+                    flat
+                    tile
+                    class="indigo lighten-1 white--text text-xs-center"
+                  >
+                    <!-- <v-card-text dark>
+                      <v-btn
+                        v-for="icon in icons"
+                        :key="icon"
+                        class="mx-3 white--text"
+                        icon
+                      >
+                        <v-icon size="24px">{{ icon }}</v-icon>
+                      </v-btn>
+                    </v-card-text >
+               -->
+                    <v-card-text class="white--text pt-0">
+                      This is a random project to help me learn vuetify. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    </v-card-text>
+              
+                    <v-divider></v-divider>
+              
+                    <v-card-text class="white--text">
+                      &copy;2019 — <strong>Vuetify</strong>
+                    </v-card-text>
+                  </v-card>
+                </v-footer>
+              </template>
+      </v-app>
+       
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+    <script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            randNum: Math.floor(Math.random()*100) + 1
+        },
+        methods:{
+            magic(){
+                alert(`Here is your random number:${this.randNum}`)
+            }
+        }
+    })
+    
+    </script>
+</body>
+</html>
